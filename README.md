@@ -1,21 +1,19 @@
-# StartIt 🚀
+# Sensei AI
+
+
 
 <p align="center">
-  <img src="https://github.com/prathyushnallamothu/startit/raw/master/logo.png" alt="StartIt Logo" width="200"/>
+  <b>Intelligent Repository Setup & Automation Engine</b><br/>
+  Automate GitHub repository initialization with AI-driven command parsing, safe execution, and real-time terminal feedback.
 </p>
 
 <p align="center">
-  <b>AI-Powered Repository Setup Assistant</b><br/>
-  Automate GitHub repository setup with intelligent command execution and real-time terminal output
-</p>
-
-<p align="center">
+  <a href="#overview">Overview</a> •
   <a href="#features">Features</a> •
+  <a href="#architecture">Architecture</a> •
   <a href="#installation">Installation</a> •
   <a href="#usage">Usage</a> •
-  <a href="#architecture">Architecture</a> •
-  <a href="#development">Development</a> •
-  <a href="#troubleshooting">Troubleshooting</a> •
+  <a href="#api-reference">API Reference</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#license">License</a>
 </p>
@@ -24,16 +22,63 @@
 
 ## Overview
 
-StartIt revolutionizes the way developers interact with new GitHub repositories by automating the tedious setup process. Instead of manually reading through READMEs and executing setup commands one by one, StartIt analyzes repositories, identifies setup instructions, and executes them with proper error handling - all through an intuitive GUI.
+Sensei AI revolutionizes developer onboarding by automating the repository setup process. Instead of manually parsing `README` files and executing configuration commands sequentially, Sensei AI leverages artificial intelligence to analyze project documentation, identify necessary prerequisites, and safely execute setup instructions through an intuitive graphical interface.
 
-**Say goodbye to setup frustration and get coding faster!**
+Minimize configuration drift, eliminate setup friction, and accelerate your time-to-code.
 
 ## Features
 
 ### 🔍 Intelligent Repository Analysis
-- Automatically detects setup instructions from README files and common setup scripts
-- Identifies project dependencies and prerequisites
-- Supports multiple programming languages and frameworks
+- Automatically parses and extracts setup instructions from documentation and initialization scripts.
+- Accurately identifies project dependencies and system prerequisites.
+- Seamlessly supports multiple programming languages and development frameworks.
+
+### 🛠️ Robust Execution Engine
+- Safely executes commands within isolated environments with comprehensive error handling.
+- Provides real-time, color-coded terminal output for complete visibility.
+- Supports background command execution with granular status tracking and sequential queueing.
+
+### 🌳 Git Integration
+- Natively clones public GitHub repositories.
+- Supports specific branch targeting for precise repository environment setup.
+
+### 🤖 AI-Powered Troubleshooting
+- **Smart Documentation Parsing:** Deep semantic analysis of repository documentation.
+- **Automated Issue Resolution:** Context-aware troubleshooting recommendations for failed commands and dependency conflicts.
+
+### 💻 Modern User Interface
+- High-performance, cross-platform UI built with Flutter.
+- Integrated real-time terminal emulator.
+- Visual step-tracking and prerequisite validation workflows.
+
+
+
+## Installation
+
+### System Prerequisites
+- **Git** installed and configured in your system path.
+- Active internet connection.
+- Valid API key for AI features (e.g., OpenAI API).
+
+### Quick Start
+1. Clone the repository and navigate to the backend directory to set up the Go server.
+2. Provide your AI configuration in the `.env` file.
+3. Navigate to the frontend directory and run `flutter pub get` followed by `flutter run`.
+
+## Usage
+
+1. Launch the **Sensei AI** application.
+2. Input the target GitHub repository URL.
+3. Click **Analyze Repository** to initiate the AI parsing engine.
+4. Review the extracted setup workflow and required dependencies.
+5. Click **Run Setup Commands** to begin the automated initialization.
+6. Monitor the integrated terminal for real-time progress. Utilize the **AI Troubleshoot** feature if execution errors occur.
+
+
+
+
+
+
 
 ### 🛠️ Command Execution System
 - Executes commands safely with proper error handling
@@ -86,9 +131,13 @@ StartIt revolutionizes the way developers interact with new GitHub repositories 
 
 ## Architecture
 
-StartIt is built with a clear separation of concerns:
+Sensei AI utilizes a decoupled architecture for maximum performance and scalability:
 
 ### Backend (Go)
+- **API Server:** Exposes a robust RESTful API for client communication.
+- **Execution Environment:** Manages secure command execution and output streaming.
+- **AI Analyzer:** Integrates with LLMs to process natural language documentation and provide error resolution.
+
 
 ```
 /backend
@@ -113,6 +162,9 @@ The backend provides:
 - AI-based troubleshooting
 
 ### Frontend (Flutter)
+- **Dashboard Interface:** Centralized hub for repository analysis and management.
+- **Terminal Component:** Real-time log streaming and execution visualization.
+- **State Management:** Efficient UI state handling for a seamless user experience.
 
 ```
 /frontend
@@ -192,10 +244,6 @@ The frontend provides:
    flutter run -d chrome
    ```
 
-## API Reference
-
-StartIt's backend exposes a RESTful API:
-
 ### Repository Operations
 
 - `POST /api/repositories/clone`
@@ -258,12 +306,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Author
 
-[Prathyush Nallamothu](https://github.com/prathyushnallamothu)
-
----
-
-<p align="center">
-  Made with ❤️ by Prathyush Nallamothu
-</p>
